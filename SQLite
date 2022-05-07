@@ -16,6 +16,7 @@ where zip = 20252;
 -- 3
 -- Use a query to find the names 
 -- and emails associated with these transactions.
+-- Remember when something you want to find lay in the middle of the string, you have to space both the beginning and the end of the string so it can be alone in the middle, like below:
 
 select full_name, email
 from transaction_data
