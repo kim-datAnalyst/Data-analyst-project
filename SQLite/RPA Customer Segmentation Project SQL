@@ -2,14 +2,14 @@
 -- What are the column names? id email campaign test created_at birthday. There are 6 columns
 select * from users limit 20;
  
--- 2
+-- 2 (có thể thấy rằng string có thể được sử dụng và so sánh xài lệnh brtween như bình thường nếu như dạng string đó có số)
 -- Find the email addresses and birthdays of users whose 
 -- birthday is between 1980-01-01 and 1989-12-31.
 -- select email, birthday
 -- from users
 -- where birthday between '1980-01-01' and '1989-12-31';
    
--- 3
+-- 3 (tương tự với câu số 2)
 -- Find the emails and creation date of users 
 -- whose created_at date matches this condition.
 -- select email, created_at
@@ -42,7 +42,7 @@ select * from users limit 20;
 -- where test is not null and campaign is not null;
 
 
--- 8
+-- 8 (tương tự với câu số 2 nhưng mà tình huống này là có thể chuyển đổi string dạng số và tính toán như bình thường luôn)
 -- Challenge
 -- One of the members of the marketing team had an idea of calculating
 -- how old users were when they signed up.
