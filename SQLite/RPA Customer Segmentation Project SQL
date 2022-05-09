@@ -1,49 +1,56 @@
 -- 1
 -- What are the column names? id email campaign test created_at birthday. There are 6 columns
-select * from users limit 20;
+
+SELECT * FROM users LIMIT 20;
  
 -- 2 (có thể thấy rằng string có thể được sử dụng và so sánh xài lệnh brtween như bình thường nếu như dạng string đó có số)
 -- Find the email addresses and birthdays of users whose 
 -- birthday is between 1980-01-01 and 1989-12-31.
--- select email, birthday
--- from users
--- where birthday between '1980-01-01' and '1989-12-31';
+
+-- SELECT email, birthday
+-- FROM users
+-- WHERE birthday BETWEEN '1980-01-01' AND '1989-12-31';
    
 -- 3 (tương tự với câu số 2)
 -- Find the emails and creation date of users 
 -- whose created_at date matches this condition.
--- select email, created_at
--- from users
--- where created_at < '2017-05-01';
+
+-- SELECT email, created_at
+-- FROM users
+-- WHERE created_at < '2017-05-01';
 
 -- 4
 -- Find the emails of the users who received the ‘bears’ test.
--- select email, test from users
--- where test = 'bears';
+
+-- SELECT email, test FROM users
+-- WHERE test = 'bears';
 
 -- 5
 -- Find all the emails of all users who 
 -- received a campaign on website BBB.
--- select email, campaign from users
--- where campaign like 'BBB%';
+
+-- SELECT email, campaign FROM users
+-- WHERE campaign LIKE 'BBB%';
 
 -- 6
 -- Find all the emails of all users who received ad copy 2 in 
 -- their campaign.
--- select email, campaign from users
--- where campaign like '%-2';
+
+-- SELECT email, campaign FROM users
+-- WHERE campaign LIKE '%-2';
 
 -- 7
 -- Find the emails for all users who received both a campaign and a test. 
 -- These users will have non-empty entries in the 
 -- campaign and test columns.
--- select email, campaign, test
--- from users
--- where test is not null and campaign is not null;
+
+-- SELECT email, campaign, test
+-- FROM users
+-- WHERE test IS NOT NULL AND campaign IS NOT NULL;
 
 
 -- 8 (tương tự với câu số 2 nhưng mà tình huống này là có thể chuyển đổi string dạng số và tính toán như bình thường luôn)
 -- Challenge
 -- One of the members of the marketing team had an idea of calculating
 -- how old users were when they signed up.
-select email, (created_at - birthday) as "AGE" from users;
+SELECT email, (created_at - birthday) AS "AGE" FROM users;
